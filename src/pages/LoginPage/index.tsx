@@ -5,7 +5,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
-import Link from '@mui/material/Link';
+import Link  from '@mui/material/Link';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
@@ -19,7 +19,7 @@ import { FormHelperText } from '@mui/material';
 import useForm, { validateAllFields, validateField } from 'shared/hooks/useForm';
 import loginForm from 'shared/hooks/useForm/forms/loginForm';
 import PageProvider, { usePageContext } from 'contexts/PageContext';
-
+import { Link as RRLink } from "react-router-dom";
 
 export default function LoginPage() {
   const signIn = useSignIn()
@@ -169,13 +169,13 @@ function LoginContent() {
               </Button>
               <Grid container>
                 <Grid item xs>
-                  <Link href="/forgot" variant="body2">
+                  <Link component={RRLink} to="/forgot" variant="body2">
                     Forgot password?
                   </Link>
                 </Grid>
                 <Grid item>
-                  <Link href="/register" variant="body2">
-                    {"Create Account"}
+                  <Link component={RRLink} to="/register" variant="body2">
+                    Create Account
                   </Link>
                 </Grid>
               </Grid>
