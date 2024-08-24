@@ -55,8 +55,8 @@ export function EditModalContent() {
     const { field, validate } = form;
 
     return (
-        <Modal className="modal edit-modal" open={modal}>
-            <Box>
+        <Modal className="modal edit-modal" open={modal} >
+            <Box className="modal-container">
                 <Typography id="id-id-title" variant='h5' gutterBottom={true}>
                     Edit User
                 </Typography>

@@ -40,7 +40,7 @@ function DeleteModalContent() {
 
     return (
         <Modal className="delete-modal" open={modal}>
-            <Box>
+            <Box className="modal-container">
                 <Typography id="id-id-title" gutterBottom={true}>
                     Are you sure you want to delete this user?
                 </Typography>

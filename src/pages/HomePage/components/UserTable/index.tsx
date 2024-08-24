@@ -22,7 +22,7 @@ export default function UsersTable(_props: any) {
   const users = data !== undefined && data.length > 0 ? data : [];
 
   return (
-    <TableContainer sx={sx} component={Paper} >
+    <TableContainer className="users-table" sx={sx} component={Paper} >
       <Table aria-label="simple table">
         <TableHead>
           <TableRow>

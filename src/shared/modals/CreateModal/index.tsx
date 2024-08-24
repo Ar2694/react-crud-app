@@ -56,7 +56,7 @@ function CreateModalContent() {
 
     return (
         <Modal className="modal create-modal" open={modal}>
-            <Box>
+            <Box className="modal-container">
                 <Typography id="id-id-title" variant='h5' gutterBottom={true}>
                     Create A User
                 </Typography>

@@ -2,7 +2,7 @@ import { ThemeOptions } from "@mui/material";
 
 const typography: ThemeOptions = {
   typography: {
-    fontFamily: "Montserrat, sans-serif"
+    fontFamily: "Montserrat, sans-serif",
   }
 };
 

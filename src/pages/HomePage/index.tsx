@@ -6,6 +6,7 @@ import UserService from "api/services/UserService";
 import PageProvider, { usePageContext } from "contexts/PageContext";
 import CreateModal from "shared/modals/CreateModal";
 import usePagination from "shared/hooks/usePagination";
+import MobileUsersTable from "./components/MobileUserTable";
 
 export default function HomePage() {
   const pagination = usePagination(UserService.getUsers);
@@ -25,15 +26,16 @@ function Home(_props: any) {
   return (
     <BaseLayout className="home-page">
       <Grid sx={{ alignItems: "center", marginBottom: 2 }} container spacing={2}>
-        <Grid item xs={12} sm>
+        <Grid item xs={12} md>
           <TextField placeholder="Search" name="search" onChange={search} variant="outlined" fullWidth />
         </Grid>
         {isAuthenticated &&
-          <Grid item xs={12} sm="auto">
+          <Grid item xs={12} md="auto">
             <CreateModal />
           </Grid>}
       </Grid>
       <UsersTable />
+      <MobileUsersTable />
     </BaseLayout>
   )
 }
