@@ -14,6 +14,7 @@ import PageProvider, { usePageContext } from 'contexts/PageContext';
 import useForm, { compareValues, validateAllFields, validateField } from 'shared/hooks/useForm';
 import registerForm from 'shared/hooks/useForm/forms/registerForm';
 import RegisterConfirmDialog from 'shared/dialogs/RegisterConfirmDialog';
+import { Link as RRLink } from "react-router-dom";
 
 export default function RegisterPage() {
 
@@ -171,7 +172,7 @@ function RegisterContent() {
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link href="/login" variant="body2">
+                <Link component={RRLink} to="/login" variant="body2">
                   Already have an account? Sign in
                 </Link>
               </Grid>
